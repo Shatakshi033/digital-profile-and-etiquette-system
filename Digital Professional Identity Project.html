@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Professional Identity & Workplace Etiquette System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #1a252f;
+    }
+    .card {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Digital Professional Identity & Workplace Etiquette System</h1>
+  </header>
+
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#etiquette">Etiquette</a>
+    <a href="#communication">Communication</a>
+    <a href="#interview">Interview Training</a>
+    <a href="#resume">Resume Generator</a>
+  </nav>
+
+  <div class="container" id="profile">
+    <h2>Professional Profile</h2>
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <label>Skills:</label>
+    <textarea id="skills" placeholder="Enter your skills"></textarea>
+
+    <label>Education:</label>
+    <textarea id="education" placeholder="Enter your education"></textarea>
+
+    <button onclick="saveProfile()">Save Profile</button>
+
+    <div class="card" id="profileOutput"></div>
+  </div>
+
+  <div class="container" id="etiquette">
+    <h2>Workplace Etiquette Learning</h2>
+    <ul>
+      <li>Proper dress code</li>
+      <li>Avoid slouching & maintain posture</li>
+      <li>Respect colleagues</li>
+      <li>Time management</li>
+      <li>Professional emails</li>
+    </ul>
+  </div>
+
+  <div class="container" id="communication">
+    <h2>Communication Skill Trainer</h2>
+    <ul>
+      <li>Active listening</li>
+      <li>Avoid filler words</li>
+      <li>Polite tone</li>
+      <li>Proper email greetings</li>
+    </ul>
+  </div>
+
+  <div class="container" id="interview">
+    <h2>Interview Preparedness</h2>
+    <ul>
+      <li>How to sit properly</li>
+      <li>Body language</li>
+      <li>Eye contact</li>
+      <li>How to answer questions confidently</li>
+    </ul>
+  </div>
+
+  <div class="container" id="resume">
+    <h2>Digital Resume Generator</h2>
+    <button onclick="generateResume()">Generate Resume</button>
+    <div class="card" id="resumeOutput"></div>
+  </div>
+
+  <script>
+    function saveProfile() {
+      const name = document.getElementById("name").value;
+      const skills = document.getElementById("skills").value;
+      const education = document.getElementById("education").value;
+
+      document.getElementById("profileOutput").innerHTML = `
+        <h3>Saved Profile</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Skills:</strong> ${skills}</p>
+        <p><strong>Education:</strong> ${education}</p>
+      `;
+    }
+
+    function generateResume() {
+      const name = document.getElementById("name").value;
+      const skills = document.getElementById("skills").value;
+      const education = document.getElementById("education").value;
+
+      document.getElementById("resumeOutput").innerHTML = `
+        <h3>Generated Resume</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Skills:</strong> ${skills}</p>
+        <p><strong>Education:</strong> ${education}</p>
+        <p>Thank you for using the Digital Resume Generator.</p>
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# digital-profile-and-etiquette-system
+# Digital-profile-and-etiquette-system
 💼 A Complete System for Building Digital Identity and Polishing Professional Behavior.
 
 <h1 align="center">🌐 Digital Profile & Etiquette System</h1>
